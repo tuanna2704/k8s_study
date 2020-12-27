@@ -1,0 +1,23 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: nodejs-deployment
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      app.kubernetes.io/name: docker-desktop
+  template: 
+    metadata: 
+      labels: 
+        app: nodejs
+        app.kubernetes.io/name: docker-desktop
+    spec: 
+      containers: 
+        - 
+          image: "tuanna2704/node-server:1.0.0"
+          name: t-express
+          ports: 
+            - 
+              containerPort: 3000
