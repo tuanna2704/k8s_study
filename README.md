@@ -15,3 +15,19 @@ Sửa thông tin của 1 resource đang chạy
 ```
 kubectl edit -it <resource-kind>/<resource-name>
 ```
+Kiểm tra các lần cập nhật
+```
+kubectl rollout history deploy/<deploy-name>
+```
+Xem chi tiết các thay đổi trong lần cập nhật
+```
+kubectl rollout history deploy/<deploy-name> --revision=<number>
+```
+Rollback về 1 bản cập nhật nào đó
+```
+kubectl rollout undo deploy/<deploy-name> --to-revision=<number>
+```
+Còn nếu muốn quay về bản cập nhật ngay trước đó thì chỉ cần dùng lệnh
+```
+kubectl rollout undo deploy/<deploy-name>
+```
