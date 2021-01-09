@@ -7,3 +7,7 @@ Bật proxy trong kubernetes
 ```
 kubectl proxy --address 0.0.0.0 --accept-hosts '.*'
 ```
+Truy cập vào container thuộc 1 pod nào đó
+```
+kubectl exec -it <pod-name> -c <container-name> -- bash
+```
