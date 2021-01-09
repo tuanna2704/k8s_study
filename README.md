@@ -31,3 +31,9 @@ Còn nếu muốn quay về bản cập nhật ngay trước đó thì chỉ c�
 ```
 kubectl rollout undo deploy/<deploy-name>
 ```
+Scale 1 số lượng pod của 1 deployment theo điều kiện
+```
+kubectl scale deploy/<deploy-name> --replicas=<number>
+
+kubectl scale deploy/<deploy-name> --min=<number> --max=<number> --cpu-percent=<number>
+```
