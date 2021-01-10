@@ -37,3 +37,8 @@ kubectl scale deploy/<deploy-name> --replicas=<number>
 
 kubectl scale deploy/<deploy-name> --min=<number> --max=<number> --cpu-percent=<number>
 ```
+Xem log của 1 pod
+```
+kubectl logs -f <pod-name>
+```
+
